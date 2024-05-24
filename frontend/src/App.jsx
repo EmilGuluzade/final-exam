@@ -12,16 +12,19 @@ function App() {
     const [data, setData] = useState([]);
     const router = createBrowserRouter(ROUTES);
     const [basket, setBasket] = useState( localStorage.getItem("basket") ? JSON.parse(localStorage.getItem("basket")) : []);
+    const [wishlist, setWishlist] = useState( localStorage.getItem("wishlist") ? JSON.parse(localStorage.getItem("wishlist")) : []);
+
     useEffect(() => {
       localStorage.setItem("basket", JSON.stringify(basket));
-    }, [basket]);
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+    }, [basket,wishlist]);
   
   useEffect(() => {
     axios.get(MAIN_URL).then((res) => {
       setData([...res.data]);
-      console.log(res.data)
     });
-  }, [data]);
+  }, []);
 
   function addToBasket(id) {
     let basketItem = basket.find((x) => x._id == id);
@@ -42,7 +45,19 @@ function App() {
     }
   }
 
+function toggleWishList(id) {
+  let wishItem=wishlist.find(x=>x._id==id)
 
+  if (!wishItem) {
+    let target=data.find(x=>x._id==id)
+setWishlist([...wishlist,{...target}])
+alert("Item Added To WishList")
+  } else {
+setWishlist([...wishlist.filter(x=>x._id!=id)])
+alert("Item Deleted From WishList")
+    
+  }
+}
 
   function deleteFromBasket(id) {
     let target = basket.find((x) => x._id == id);
@@ -58,7 +73,7 @@ function App() {
   
 
     const contextData = {
-      data, setData,addToBasket, deleteFromBasket, basket, setBasket
+      data, setData,addToBasket, deleteFromBasket, basket, setBasket,toggleWishList,wishlist
     }
 
     return (

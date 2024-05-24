@@ -5,7 +5,7 @@ import SiteRoot from "../pages/site/SiteRoot"
 import Home from "../pages/site/Home/Home"
 import Basket from "../pages/site/Basket/Basket"
 import Detail from "../pages/site/Detail/Detail"
-
+import WishList from "../pages/site/WishList/WishList"
 const ROUTES =[
     {
         path:"/",
@@ -18,7 +18,11 @@ const ROUTES =[
             {
               path:"/basket",
               element:<Basket/>
-            },
+            },  {
+                path:"/wishlist",
+                element:<WishList/>
+              }
+            ,
             {
               path:"/detail/:id",
               element:<Detail/>

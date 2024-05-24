@@ -1,0 +1,23 @@
+.tester{
+    
+       padding: 100px 0;
+        background-image: url("https://preview.colorlib.com/theme/pulse/img/review-bg.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .coritem{
+             
+                color: white;
+
+                padding: 100px 0;
+gap: 30px;
+                p{
+                        text-align: center;
+                }
+                h5{
+                        color: #ffc515;
+                }
+        }
+ 
+}

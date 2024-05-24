@@ -24,7 +24,7 @@ import React, { useContext, useState } from "react";
                       <title>Add</title>
                     </Helmet>
                     <Formik
-                      initialValues={{ image: "", title: "", price: "", description: "", category: "men" }}
+                      initialValues={{ image: "", title: "", price: "", description: "", category: "all brunch  " }}
                       validationSchema={validationSchema}
                       onSubmit={(values, { resetForm }) => {
                         setIsSubmitting(true);
@@ -58,7 +58,7 @@ import React, { useContext, useState } from "react";
                         handleSubmit,
                       }) => (
                         <form
-                          className="container text-light text-center  p-5 gap-3 d-flex flex-column w-50 mt-5 rounded-3 mb-5 bg-danger"
+                          className="container text-light text-center  p-5 gap-3 d-flex flex-column w-50 mt-5 rounded-3 mb-5 bg-success "
                           onSubmit={handleSubmit}
                         >
                           <label htmlFor="title" className="form-label">
@@ -132,8 +132,10 @@ import React, { useContext, useState } from "react";
                             onBlur={handleBlur}
                             value={values.category}
                           >
-                            <option value="men">Men</option>
-                            <option value="women">Women</option>
+                            <option value="all brunch ">Brunch</option>
+                            <option value="all lunch">Lunch</option>
+                            <option value="all dinner ">Dinner</option>
+
                           </select>
                           {errors.category && touched.category && <div className="text-danger">{errors.category}</div>}
               

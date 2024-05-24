@@ -9,7 +9,6 @@ ul {
   list-style: none;
 }
 body {
-  /* font-family: "Poppins", sans-serif; */
   color: #212529;
 }
 a {
@@ -17,3 +16,9 @@ a {
   text-decoration: none;
   margin: 0;
 }
+
+.container{
+  max-width: 1150px;
+  margin: 0 auto;
+}
+

@@ -20,7 +20,7 @@ const Detail = () => {
       
     const {data,setData,setBasket,addToBasket}=useContext(MainContext)
   return (
-    <div className="container d-flex  mt-5 py-5 ">
+    <div className="container d-flex  mt-5 py-5  " style={{minHeight:"700px"}}>
     <Helmet>
       <title>
         Detail

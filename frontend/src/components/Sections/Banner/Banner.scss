@@ -1,0 +1,15 @@
+.carousel-item  h2{
+    display: flex;align-items: end;
+top: 50%;left: 50%;
+transform: translate(-50%,-50%);
+font-size: 110px;color: white;
+span{
+    color: #ffc515;
+}
+}
+
+@media only screen and (max-width:700px) {
+    .carousel-item h2{
+font-size: 24px;
+    }
+}

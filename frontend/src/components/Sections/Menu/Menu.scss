@@ -1,0 +1,93 @@
+.menu{
+    padding: 110px 0 300px 0;
+    background-image: url("https://preview.colorlib.com/theme/pulse/img/menu-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    .menu_filter{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+        ul{
+            display: flex;
+            gap: 20px;
+           
+
+            button{
+                background-color:transparent;
+                border: none;
+                outline: none; color: white;
+                font-weight: 700px;
+                font-size: 18px;
+transition: 0.3s;
+                &:hover{
+color: #ffc515;
+                }
+            }
+        }
+    }
+.menu_cards{
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu_card{
+    .card_price{
+        color: white;
+        font-size: 20px;
+    }
+    h5{
+color: white;
+    }
+    .dotted{
+      margin-left: 20px;
+      margin-right: 20px;
+
+      color: #7e7e7e;
+      display: flex;
+      align-items: center;
+    }
+    .card_des{
+color: #7e7e7e;
+font-size: 12px;
+    }
+}
+
+}
+
+.section__heading{
+    .section__heading-img{
+        display: flex;justify-content: center;
+        i{
+            font-size: 60px;
+        }
+    }
+    .section__heading-title{
+       h2{
+           font-size: 48px;
+           display: flex;justify-content: center;
+align-items: center;
+color: white;
+           &::before{
+            content: "";
+            display: block;
+height: 2px;width: 300px;
+background-color: #ffc515;
+margin-right: 20px;
+           }
+           &::after{
+            content: "";
+            display: block;
+height: 2px;width: 300px;
+background-color: #ffc515;
+margin-left: 20px;
+
+           }
+       }
+    }
+}
